@@ -1,0 +1,161 @@
+/* Light Mode (Default) */
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+    /* Dark Mode */
+    body.dark-mode {
+        background-color: #1e1e1e;
+        color: #ffffff; /* Ensure all text is white in dark mode */
+    }
+
+        body.dark-mode h1,
+        body.dark-mode p,
+        body.dark-mode table.table th,
+        body.dark-mode table.table td,
+        body.dark-mode .navbar a.nav-link,
+        body.dark-mode .btn-primary {
+            color: white; /* Ensure all text in dark mode is white */
+        }
+
+        /* Navbar Dark Mode */
+        body.dark-mode .navbar {
+            background-color: #222;
+            border-bottom: 1px solid #444;
+        }
+
+            body.dark-mode .navbar a.nav-link {
+                color: white;
+            }
+
+                body.dark-mode .navbar a.nav-link:hover {
+                    color: #258cfb;
+                }
+
+        /* Table Dark Mode */
+        body.dark-mode table.table th,
+        body.dark-mode table.table td {
+            border-bottom: 1px solid #555;
+        }
+
+        body.dark-mode table.table th {
+            background-color: #333;
+            color: #258cfb;
+        }
+
+        body.dark-mode table.table tr:hover {
+            background-color: #444;
+        }
+
+        /* Form Inputs Dark Mode */
+        body.dark-mode input.form-control {
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+        }
+
+/* Theme Toggle Switch */
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 12px;
+        width: 12px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+input:checked + .slider {
+    background-color: #258cfb;
+}
+
+    input:checked + .slider:before {
+        transform: translateX(14px);
+    }
+
+/* Media Queries for Mobile Optimization */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    p.lead {
+        font-size: 14px;
+    }
+
+    input.form-control {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    a.btn-primary {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    a.btn-back {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    table.table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p.lead {
+        font-size: 14px;
+    }
+
+    a.btn-primary,
+    a.btn-back {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
