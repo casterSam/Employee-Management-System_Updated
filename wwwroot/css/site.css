@@ -61,6 +61,13 @@ body {
     align-items: center;
     gap: 10px;
 }
+.theme-text {
+    color: #333; /* Default light mode color */
+    font-size: 0.9rem;
+    transition: color 0.4s;
+}
+
+
 
 .switch {
     position: relative;
